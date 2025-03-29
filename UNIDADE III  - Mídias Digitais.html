@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNIDADE III  - Mídias Digitais.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*
+
+Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #FFFFFF;
+}
+
+.hljs,
+.hljs-subst {
+  color: #434f54;
+}
+
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-doctag,
+.hljs-name {
+  color: #00979D;
+}
+
+.hljs-built_in,
+.hljs-literal,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #D35400;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #00979D;
+}
+
+.hljs-type,
+.hljs-string,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #005C5F;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: rgba(149,165,166,.8);
+}
+
+.hljs-meta-keyword {
+  color: #728E00;
+}
+
+.hljs-meta {
+  color: #434f54;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-function {
+  color: #728E00;
+}
+
+.hljs-number {
+  color: #8A7B52;  
+}
+
+</style>
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family:   "HelveticaNeue-Light", sans-serif, "宋体","Segoe WPC", "Segoe UI", "SFUIText-Light","Droid Sans Fallback";
+	font-size: 18px;
+	padding: 0 12px;
+	line-height: 1.6;
+	word-wrap: break-word;
+	color: #333333;
+}
+
+.content-wrapper{
+	max-width: 860px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+
+h2{
+	padding-bottom: .3em;
+    font-size: 2em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3{
+	font-size: 1.75em;
+    line-height: 1.225;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+.table-of-contents li{
+	list-style-type: initial;
+}
+</style>
+
+<style>
+@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype")}.katex{text-rendering:auto;font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.16.2"}.katex .katex-mathml{clip:rect(1px,1px,1px,1px);border:0;height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+
+</style>
+
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1 id="unidade-iii---m%C3%ADdias-digitais" tabindex="-1">UNIDADE III  - Mídias Digitais</h1>
+<h2 id="imagens" tabindex="-1">Imagens</h2>
+<h3 id="representa%C3%A7%C3%A3o-digital-das-imagens" tabindex="-1"><strong>Representação Digital das Imagens</strong></h3>
+<p>A imagem é um elemento importante em aplicações multimídia. As imagens digitais são representadas por um conjunto de pontos. A quantidade de pontos diferentes que o olho humano pode distinguir em uma imagem é chamada resolução espacial da visão. A cada ponto chamamos <strong>pixel</strong>, do inglês <strong>picture element</strong>.</p>
+<p><img src="imagens\Figura-2-Representacao-de-uma-imagem-digital-3-PRE-PROCESSAMENTO-O-pre-processamento-de.png" alt="Resultado de imagem para ### Representação Digital das Imagens"></p>
+<p>O campo visual humano pode ser comparado a uma matriz de <strong>3000 x 3000 pontos</strong>. Este é o limite de pontos que o ser humano consegue distinguir.</p>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/t6e1tgxHYt4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>https://www.youtube.com/watch?v=t6e1tgxHYt4</p>
+<p>Os filmes de cinema apresentam resoluções maiores do que isso, pois a ilusão de participação requer a inclusão da visão periférica e da visão devida a movimentos da cabeça.</p>
+<p>Nos monitores de televisão e de computadores a resolução é menor devido ao alto custo de sistemas de resolução mais poderosos. A televisão tradicional ( NTSC ou PAL-M ) tem resolução aproximada de 512 x 480 pontos. Nos sistemas de televisão de alta definição (HDTV) a resolução é de 1920 x 1080.</p>
+<p>Tanto no caso do cinema quanto nos monitores de televisão a resolução é determinada por <strong>hardware</strong>, embora alguns monitores de televisão mais modernos já permitam configuração por <strong>software</strong>.</p>
+<p>No caso de computadores a resolução é determinada exclusivamente, por software, configurando o modo gráfico diretamente no próprio sistema operacional, dentro dos limites de hardware impostos pelo monitor gráfico e pelo adaptador gráfico usados.</p>
+<h3 id="defini%C3%A7%C3%A3o-e-import%C3%A2ncia-da-cor" tabindex="-1">Definição e importância da cor</h3>
+<p>A palavra cor é comumente relacionada a três sentidos diferentes. A química a emprega como termo genérico ligado a corantes, pigmentos e materiais similares. A física a utiliza para referir-se a determinados fenômenos no campo da ótica. Fisiologistas e psicólogos interessam-se em entender a natureza do processo visual e a usam para denotar sensações da consciência de um observador humano (BYRNE; HILBERT, 1997).</p>
+<p>Cor pode ser definida como a propriedade dos corpos em absorver e refletir luz, e tem como atributos principais o matiz, a luminosidade e a saturação. É o aspecto gerado pelas percepções do órgão visual em radiação eletromagnética visível de comprimento de onda entre ~380-400 a 740-750 nm, determinado basicamente pela fonte de luz e a superfície refletora (Figura 1).</p>
+<p><img src="imagens\image-20210218214228769.png" alt="image-20210218214228769"></p>
+<p>A  percepção humana sobre as cores as tornam de caráter altamente subjetivo e pessoal, fazendo com que a sensação da cor seja única após complexas operações de recebimento registrado pela retina e processamento de estímulos recebidos pelo cérebro (CAMARGOS; GONÇALEZ, 2001).</p>
+<h3 id="m%C3%A9todos-de-mensura%C3%A7%C3%A3o" tabindex="-1">Métodos de mensuração</h3>
+<iframe width="683" height="384" src="https://www.youtube.com/embed/_bFL432vELQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>A colorimetria é a ciência e o conjunto de técnicas que busca descrever, quantificar e simular com o auxílio de modelos matemáticos a percepção da cor pelos seres humanos. Trata-se da tentativa de representar a interação da luz com os materiais percebida pelo olho e interpretada pelo cérebro.
+As mensurações da coloração de materiais como metais, polímeros, cerâmicas, compósitos e materiais
+biológicos devem ocorrer preferencialmente por meio de medidas objetivas. A eliminação do caráter
+subjetivo possibilita a padronização das medições, pois evita variáveis relacionadas à interpretação humana e àquelas relacionadas com o ambiente. Medições objetivas são preconizadas devido a sua replicabilidade entre pesquisadores, indústria e consumidores (ABBOTT, 1999; FRANCIS, 1995).</p>
+<p>Espectrofotômetros e colorímetros são dois tipos comuns de equipamentos apropriados para descrever numericamente elementos da composição de uma cor em superfícies (GONÇALEZ; JANIN; SANTORO,
+2001). O espectrofotômetro de refletância fornece a curva de distribuição de refletância da amostra,
+em cada comprimento de onda da faixa de medição do instrumento, enquanto que o colorímetro separa as componentes RGB da luz, funcionado de forma análoga ao sistema visual humano.</p>
+<iframe width="683" height="384" src="https://www.youtube.com/embed/kXsCJwBIX14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Espectrofotômetros e colorímetros são capazes de fornecer coordenadas colorimétricas (L<em>a</em>b*) universais, sob iluminantes e observadores padronizados. Hoje em dia esses dados podem ser enviados pela internet e a cor reproduzida com grande exatidão rapidamente em qualquer lugar do mundo (LOPES, 2009).</p>
+<h3 id="modelos-de-cores" tabindex="-1"><strong>Modelos de Cores</strong></h3>
+<p>A quantidade bits necessária para representar um pixel depende da representação usada para as cores, além de outras propriedades da imagem. A visão humana enxerga a luz de comprimento de onda situado entre 400 e 700 nanômetros. As luzes dentro desta faixa são percebidas como cores espectrais ou cores do arco-íris e vão do violeta ao <strong>anil, azul, verde, amarelo, alaranjado e vermelho</strong>. Destas, as faixas de maior sensibilidade ao olho humano correspondem as cores <strong>verde</strong> ( principal ), <strong>azul</strong> ( bem menor ) e <strong>vermelho</strong> ( um pouco menor ).</p>
+<p><img src="imagens\8c227316a719d1dd4be8bc43152211b2c89b3d28.jpg" alt="Resultado de imagem para representação  de Cores imagem"></p>
+<p>A maioria das cores que enxergamos não são cores puras mas composições resultantes de processos de emissão, reflexão, refração, difusão e absorção de luz. As cores são percebidas então como misturas de no máximo <strong>três cores</strong> básicas. Cada mistura pode ser expressa como uma <strong>combinação linear</strong>, isto é, cada cor é obtida pela soma ponderada das cores básicas.</p>
+<p>Foram definidos sistemas de representação de cores ou modelos de cores que são usados pela indústria gráfica e por pintores. Nestes sistemas as cores são conhecidas por nomes ou por números. Para o processamento digital de imagem são necessários sistemas rigorosos de especificação que são chamados de modelos de cores.</p>
+<p>https://color.adobe.com/pt/create/color-wheel</p>
+<p>Os modelos de cores mais usados se baseiam na decomposição de cores em misturas equivalentes das cores básicas. Cada cor então pode ser decomposta em uma mistura das <strong>três cores básicas</strong>. O sistemas de computador suportam mais de um modelo de cores e os programas gráficos profissionais permitem ao usuário selecionar o modelo de cor que deseja usar.</p>
+<p>Vamos ver os principais sistemas de representação de cores utilizados:</p>
+<img src="imagens\cores-759041.jpg" alt="Resultado de imagem para **Sistema Aditivo**" style="zoom: 50%;" />
+<p><strong>Sistema Aditivo</strong> - É um dos modelos mais utilizados e é também, conhecido como sistema RGB. Este sistema é baseado nas três cores verde, vermelho e azul que são as cores de maior sensibilidade. Estas cores formam as primárias aditivas usadas no <strong>sistema RGB ( red-green-blue )</strong>. Neste sistema parte-se da ideia de que qualquer cor pode ser representada como uma <strong>soma ponderada</strong> das cores azul, verde e vermelha. Trata-se de um padrão aditivo, que adiciona e combina cores para formar novas tonalidades, <strong>sem depender da luz externa</strong>. Os dispositivos que funcionam por emissão de luz, como os televisores e monitores de computadores, funcionam de acordo com o sistema RGB. Ao combinar as três cores, obtém-se mais luz, formando a cor branca. Por outro lado, quando se sobrepõem as cores em pares (de duas em duas), ganha-se as três cores primárias (amarelo, magenta e ciano). Cada cor do sistema RGB tem uma identificação numérica, muito utilizada em softwares de projetos visuais, como o Photoshop por exemplo. Essa representação é formada por três números, que variam cada um entre 0 e 255, representando a sua intensidade de vermelho, verde e azul, respectivamente.</p>
+<p><img src="imagens\cmyk-colores_23-2147501034.jpg" alt="CMYK"></p>
+<p><strong>Sistema Subtrativo -</strong>  É um sistema que usa as <strong>cores complementares</strong> das cores básicas que são as cores secundárias, ou seja, <strong>o ciano ( turquesa ), o magenta ( púrpura ) e o amarelo</strong>. As cores secundárias são chamadas de <strong>primárias subtrativas</strong> e são usadas nos processos de impressão colorida e fotografia. O sistema subtrativo também é chamado de sistema CMY ( ciano, magenta e amarelo ). Este sistema é o mais natural para dispositivos de cópia como as impressoras coloridas. Diferente do RGB, que é uma “cor luz”, o CMYK é um padrão de cores formado por pigmentação. Como todas as cores se sobrepõem nesse sistema, a impressão é chamada de “cromia”. O que diferencia uma cor da outra, nesse caso, é o percentual de cada pigmentação utilizada. Por exemplo: C: 22% M: 34% Y: 31% K: 19%.</p>
+<p><img src="imagens\HLS_.png" alt="Resultado de imagem para Sistema HLS cores"></p>
+<p><strong>Sistema HLS -</strong> É um sistema baseado em três qualidades distintas das cores que são a intensidade ou luminância, Matiz e a Saturação. Estas são qualidades relacionadas à percepção humana e formam a base do sistema HLS. Cada qualidade é medida e por isso este sistema é também conhecido por sistema quantitativo. A seguir vamos descrever de forma simples cada uma das qualidades relacionadas à percepção que formam a base do sistema HLS.</p>
+<blockquote>
+<p><strong>Intensidade (brilho) -</strong> Tem a ver com a amplitude da vibração luminosa, com a energia e é o parâmetro da cor para o qual o olho humano é mais sensível.</p>
+<p><strong>Matiz (Tonalidade) -</strong> Mede a qualidade que distingue o azul do verde, do vermelho, etc.</p>
+<p><img src="imagens\360px-HueScale.svg.png" alt="img"></p>
+<p><strong>Saturação -</strong> Mede o grau de pureza de uma cor em relação a contaminação por outras cores. Saturação é a proporção de quantidade de cor em relação à cor cinza média. Quanto menos cinza na composição da cor, mais saturada ela é.</p>
+</blockquote>
+<p><img src="imagens\lgh-cie-01.gif" alt="Resultado de imagem para O sistema CIE cores"></p>
+<p><strong>O sistema CIE -</strong> É um sistema baseado em três cores imaginárias e invisíveis, chamadas X, Y e Z.</p>
+<p>Nesse sistema, as cores são definidas de tal modo que qualquer cor visível possa ser expressa como combinação linear dessas cores básicas.</p>
+<p>Este sistema é definido pela International Commission on Illumination.</p>
+<p><strong>Gamas</strong></p>
+<p>Chamamos Gama ao conjunto de cores que pode ser produzido a partir de determinadas primárias. Quanto mais saturadas as cores primárias, maior a gama. A gama dos monitores profissionais é maior do que os televisores. Isto significa que as cores mais saturadas produzidas em um sistema de computação gráfica não podem ser corretamente reproduzidas em um televisor, são reproduzidas de forma distorcida.</p>
+<p><strong>Codificação das Cores</strong></p>
+<p>Quantização das Cores - Em sistemas baseados em cores primárias, é preciso prever a possibilidade de imagens formadas por pontos que se distinguem pela luminância, independente do Matiz e Saturação da cor. É necessário que haja 8 bits por pixel para cada cor primária, correspondendo à sensibilidade do olho humano que pode distinguir até 256 diferentes níveis de luminância. Os sistemas baseados neste princípio podem reproduzir até 16 milhões de cores diferentes e são denominados sistemas de cor verdadeira.</p>
+<p>https://www.w3schools.com/colors/colors_picker.asp</p>
+<p><strong>Paletas e dithering</strong></p>
+<p>Quando a capacidade de reprodução de cores do sistema for menor do que a dos sistemas de cor verdadeira é preciso usar o conceito de paleta que usa uma tabela armazenada em memória e que faz o mapeamento de cada pixel para um valor que é enviado para os dispositivos gráficos. Esta tabela é chamada de paleta ( palette ) ou tabela de cores ( color look-up table ).</p>
+<p>As imagens produzidas em sistemas de pixels de 8 bits normalmente não são realistas. Pode-se, nestes casos, trocar a resolução espacial por resolução de cores, representando-se cada ponto da imagem por um grupo de pixels vizinhos. Esta técnica é conhecida como dithering.</p>
+<p><strong>Codificação da Transparência</strong></p>
+<p>Considerando que o número de bits da unidade de endereçamento ( palavra ) do computador normalmente é uma potência de 2, sistemas de 15 bits são acomodados em pixels de 16 bits. O bit extra é usado para codificar a transparência da imagem. Assim cada pixel será transparente ou opaco conforme o valor do bit extra for 1 ( ligado ) ou zero ( desligado ). Está técnica é útil para composição de imagens geradas por processos diferentes, permitindo realizar efeitos sofisticados de combinação de imagens, títulos de alta qualidade, mistura de imagens ao vivo com computação gráfica e efeitos de transição de imagens.</p>
+<p><strong>Dispositivos Gráficos</strong></p>
+<p><strong>Dispositivos de Saída Gráfica</strong></p>
+<p>São os dispositivos gráficos que apresentam ao ser humano a representação das imagens geradas por computador.</p>
+<p><strong>Tipos de dispositivos</strong></p>
+<p>Os dispositivos gráficos de saída são classificados em dispositivos interativos e os dispositivos de cópia permanente ( hard copy ).</p>
+<p>Os principais dispositivos interativos usados atualmente são:</p>
+<p>https://youtu.be/jHKi6Dk9izo</p>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/jHKi6Dk9izo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<blockquote>
+<p><strong>Monitores de Cristal Líquido (LCD)</strong> - Usados em computadores portáteis e painés gráficos. Funcionam por reflexão de luz através de pequenas células formadas por cristais líquidos.</p>
+<p><strong>Monitores Eletrolumiescentes ( LEDS)</strong> - Usados em dispositivos que devem ser lidos em situações de baixa iluminação, como painés de carros e telefones celulares, por emitirem luz própria. Funcionam com o uso de diodos semicondutores que emitem luz sob aplicação de corrente elétrica.</p>
+<p><strong>Monitores de Plasma</strong> - Usados em telas grandes, leves e planas, que podem ser montadas em paredes.</p>
+</blockquote>
+<p>As tecnologias acima possuem peso e volume menores do que os antigos televisores que usavam tubos de raios catódicos.</p>
+<p>Os dispositivos de cópias permanentes são usados para armazenamento de imagens fora do computador, registradas em papel ou em outros meios físicos. São exemplos de meios físicos:</p>
+<blockquote>
+<p><strong>Os traçadores de gráficos (plotters)</strong> que são dispositivos vetoriais que desenham por linhas ao invés de pontos ( pixels ).Eram usados em aplicações técnicas como arquitetura, para desenho de plantas, que exigiam desenhos em tamanho grande. Atualmente são dispositivos obsoletos pois foram substituídos por aplicações de computação gráfica como CAD CAM.</p>
+<p><strong>As impressoras que são dispositivos que trabalham gerando ponto a ponto</strong>. A tecnologia em uso atualmente é a impressão à laser que é muito usada por sua alta qualidade de impressão e rapidez. Para uso pessoal, se usa a impressão à jato de tinta que são mais baratas e possuem boa qualidade de impressão, alem de serem de fácil uso.</p>
+<p><strong>Os registradores de filmes</strong> que são dispositivos que gravam as imagens diretamente em filmes fotográficos, permitindo imagens de alta resolução, com ampla gama de cores e a possibilidade de pós-processamento fotográfico, que pode ser feito por software de edição de imagem como o photoshop da Adobe.</p>
+<p><strong>Os gravadores de vídeo</strong> que são dispositivos usados para registro de imagens animadas em meio formato digital. Estão sendo gradualmente substituídos por dispositivos óticos tais como DVD e Blue Ray.</p>
+</blockquote>
+<p><strong>Arquitetura de Sistemas Gráficos</strong></p>
+<p>Sistemas baseados em monitores possuem arquitetura complexa pois levam em conta muitos parâmetros que determinam a relação custo/benefício do sistema gráfico. Também existem várias alternativas de conexão para os diversos componentes que foram um subsistema de saída gráfico.</p>
+<p><strong>Sincronismo</strong></p>
+<p>O sincronismo diz respeito à forma com que os feixes de elétron varrem a tela que corresponde a um quadro com linhas que são varridas de forma sequencial. Assim a tela é dividida em linhas de varredura, que são varridas sequencialmente.</p>
+<p><strong>Parâmetros de Varredura</strong></p>
+<p>Os monitores de televisão de origem americana, brasileira e japonesa trabalham com uma frequência de varredura vertical de 60 quadros.</p>
+<p>A frequência vertical pode ser calculada multiplicando-se a frequência vertical pelo número de linhas do quadro.</p>
+<p>O parâmetro faixa de passagem, utilizado para monitores gráficos, é calculado multiplicando-se a frequência horizontal pelo número de pixels por linha e pelo número de bits por pixel dividido por 2. A faixa de passagem é um parâmetro fundamental de custo do monitor. Os parâmetros de varredura variam de acordo com o sistema utilizado ( TV, VGA, 1280 x 1024 ).</p>
+<p><strong>Varredura Entrelaçada</strong></p>
+<p>Um artifício usado para reduzir pela metade a faixa de passagem consiste em refrescar alternadamente o conjunto de linhas pares e linhas ímpares. chamados campos dos quadros. Esta técnica se chama varredura entrelaçada.</p>
+<p><strong>Escolha de Monitores</strong></p>
+<p>Atualmente os monitores de tela plana são mais usados pois são mais leves, consomem menos energia, ocupam menos espaço e cansam menos a vista. Porém possuem ângulo de visão mais restrito e alguns só são vistos confortavelmente de frente.</p>
+<p>Quanto maior a tela melhor para se trabalhar em ambientes gráficos, permitindo o uso de janelas e fontes de texto maiores.</p>
+<p>A resolução recomendada depende do tamanho da tela, da tecnologia usada e da acuidade visual do usuário. Telas de cristal líquido permitem resoluções mais altas e a resolução máxima confortável diminui com a idade e outros fatores que afetem a condição visual do usuário.</p>
+<p>Os tamanhos usados para computadores de mesa variam de 15&quot; a 20&quot; e para computadores portáteis ( notebooks e netbooks ) de 10&quot;, 13! a 15&quot;.</p>
+<p>Há ainda sistemas maiores que são usados para televisão ou para apresentações com o uso de sistemas de projeção, incluindo tecnologias como paredes de monitores.</p>
+<p><strong>Adaptadores Gráficos</strong></p>
+<p>É o dispositivo de hardware que serve de interface entre o sistema operacional e o monitor. Basicamente é uma placa conectada à placa-mãe mas que pode estar também embutida ( on-board ) na placa mãe. Este dispositivo que contém a memória de imagem onde ficam armazenados os pixels de cada imagem exibida. O tamanho desta memória determina a resolução disponível no computador e o número de cores suportada.</p>
+<p><strong>Processadores Gráficos</strong></p>
+<p>É o dispositivo que controla o adaptador gráfico e com isso libera o processador central para outras tarefas não relacionadas ao processamento gráfico. As operações realizadas pelo processador gráfico incluem transformações geométricas, conversões de representação geométrica para matriciais e alguma das principais operações matriciais, além de suporte para programação Open-GL e DirectX. Os processadores gráficos mais recentes possuem recursos poderosos para computação paralela.</p>
+<p><strong>Dispositivos de Entrada Gráfica</strong></p>
+<p>São os dispositivos através dos quais o usuário comanda o ambiente e programas gráficos. Os dispositivos de entrada gráfica bidimensional podem ser divididos nas classes abaixo:</p>
+<blockquote>
+<p><strong>Dispositivo de Teclado</strong> - Usados para digitação de comandos ou parâmetros.</p>
+<p><strong>Dispositivo Posicionador</strong> - Também conhecidos como dispositivos apontadores, são usados para realizar tarefas de apontamento, seleção e arraste. As telas de toque também funcionam como dispositivos apontadores e são usadas em notebooks.</p>
+<p><strong>Dispositivo de escolha</strong> - Representam uma simulação de teclado através de posicionadores ou teclados comuns.</p>
+<p><strong>Dispositivo avaliador</strong> - Fornecem um valor escalar, com os controles giratórios. Podem ser simulados com o uso de controles deslizantes do tipo sliders ou com barras de rolagens usadas em janelas.</p>
+<p><strong>Dispositivo de traçado</strong> - Fornecem sequências de coordenadas, permitindo a digitalização de desenhos em papel.</p>
+</blockquote>
+<p><strong>Processamento de Imagem</strong></p>
+<p><strong>Formatos de Imagens</strong></p>
+<p>Existem muitos formatos diferentes para armazenamento de imagens em arquivos. As imagens são representadas como um arranjo retangular de pixels, chamado de mapa de pixels. Fala-se em mapa de bits quando temos imagens com um bit por pixel.</p>
+<p>É importante que seja feita uma escolha cuidadosa do formato a ser utilizado para os arquivos de imagens em um projeto multimídia. Devem ser consideradas as seguintes características:</p>
+<ul>
+<li>Número de cores suportado</li>
+<li><strong>Resolução</strong></li>
+<li>Popularidade</li>
+<li><strong>Grau de Compressão</strong></li>
+</ul>
+<p>Os principais formatos em uso atualmente são os seguintes:</p>
+<ul>
+<li>PCX - Formato antigo usado em sistema DOS.</li>
+<li>GIF - Formato de imagem que suporta animação mas com limite de 256 cores.</li>
+<li>BMP - Padrão usado no Windows, que consome muito espaço pois não é comprimido.</li>
+<li><strong>TIFF - Padrão de imagem com alta resolução espacial e em cores, flexível, pode usar compressão com ou sem perdas.</strong></li>
+<li><strong>JPEG - Formato usado para fotografia digital. Pode usar compressão com ou sem perdas.</strong></li>
+<li><strong>PNG - Formato usado para distribuição de imagens comprimidas sem perdas e com cor verdadeira.</strong></li>
+<li>PCX - Usado por aplicações antigas em sistemas DOS.</li>
+<li>PCD - Formato da KODAK para fotografia digital.</li>
+<li>TGA - Usado por adaptadores gráficos TARGA para sistemas de edição e processamento de vídeo.</li>
+</ul>
+<p><strong>Operações com Imagens</strong></p>
+<p>As operações de processamento de imagens são muito variadas e possui muitas aplicações de natureza técnica. Vamos apresentar as principais operações com Imagens para produção de títulos multimídia.</p>
+<p>Podemos dividir em dois grupos de operações de imagens:</p>
+<blockquote>
+<p><strong>Processamento no domínio espacial</strong>: São as operações feitas sobre os pixels isolados de cada imagem.</p>
+<p><strong>Processamento no domínio da frequência:</strong> São as operações que requerem análise global de áreas contíguas da imagem.</p>
+</blockquote>
+<p>São exemplos de operações de processamento no domínio espacial:</p>
+<ul>
+<li>Armazenamento e recuperação de imagens;</li>
+<li>recorte, cópia e colagem de áreas de imagens;</li>
+<li>conversão de formatos de imagens;</li>
+<li>conversão de modelos de cor e separação de cores;</li>
+<li>combinação de imagens ( composição );</li>
+<li>retoque de imagens;</li>
+<li>pintura sobre imagens;</li>
+<li>redução de resolução de imagens;</li>
+</ul>
+<p>São exemplos de operações de processamento do domínio da frequência:</p>
+<ul>
+<li>mudança de escala e rotação de imagens;</li>
+<li>transformação e distorção de imagens;</li>
+<li>filtragem, suavização e realce de imagens;</li>
+<li>compressão de imagens;</li>
+</ul>
+<p><strong>Compressão de Imagens</strong></p>
+<p>Imagens de boa qualidade ocupam espaço em disco e em memória. Imagens com cor verdadeira e alta resolução podem ocupar até vários megabytes de espaço. Assim a redução do tamanho dos arquivos de imagens é feita através de técnicas de compressão de imagens estáticas. As principais técnicas são apresentadas a seguir:</p>
+<blockquote>
+<p><strong>Compressão sem perdas</strong> - Esta técnica mantêm toda a informação da imagem original. A compressão é feita através da técnica de codificação. Esta técnica é usada em comunicação de dados, com modens e para compressão de arquivos. O formato .ZIP é o mais comum atualmente. Outros formatos usados são TAR e Gzip que são usados em sistemas Unix. A compressão usa técnicas genéricas que se aproveitam de características das imagens.</p>
+<p><strong>Compressão com perdas</strong> - Esta técnica é usada em casos em que a perda de alguma informação ou qualidade da imagem é tolerável. Esta técnica ao comprimir a imagem perde alguma informação da imagem original. A taxa de perda é um parâmetro fixado durante a compressão. Quando maior a perda admitida, maior a compressão que se consegue.</p>
+</blockquote>
+<ul>
+<li>Vídeo
+<ul>
+<li>Sinais de vídeo</li>
+<li>Vídeo analógico</li>
+<li>Vídeo digital</li>
+</ul>
+</li>
+<li>Áudio
+<ul>
+<li>Digitalização</li>
+<li>Armazenamento</li>
+</ul>
+</li>
+<li>Animação</li>
+</ul>
+<h2 id="desenhos" tabindex="-1">Desenhos</h2>
+<h3 id="introdu%C3%A7%C3%A3o" tabindex="-1">Introdução</h3>
+<p>Os desenhos são figuras que são representadas por entidades provenientes da geometria. Assim, os desenhos são baseados na combinação de construções geométricas. São criados a partir de editores de desenhos que imitam as ferramentas de desenho convencional.</p>
+<h3 id="arquivos-de-desenhos" tabindex="-1">Arquivos de Desenhos</h3>
+<p>No computador, os desenhos são armazenados na forma de arquivos geométricos ou metarquivos gráficos. Eles permitem o armazenamento de figuras sintéticas em formatos mais compactos do que os que arquivos de imagens. Representam as figuras na forma de coleções de entidades geométricas. Do ponto de vista do computador, um arquivo de desenho contém registros de dados que descrevem conceitos da geometria. Esta descrição é feita com o uso de meta-dados, dado que descreve outro dado, no caso descrevem as formas geométricas que compõem o desenho. Estes arquivos também são chamados de arquivos vetoriais devido a importância que os vetores da geometria tem na descrição computacional dos desenhos.</p>
+<p><img src="imagens\arq_vetorial.jpg" alt="Arquivo Matricial Vs. Arquivo Vetorial | SOS GIS BR"></p>
+<p>Os metaarquivos são importantes também porque são eles que contém a informação útil para muitas aplicações, como programas de editoração eletrônica, ilustração gráfica e animação. Em outras aplicações, a informação vetorial pode ser integrada a bases de dados especiais de determinada área, como no caso de projeto assistido por computador ( CAD ), sistemas arquitetônicos e de engenharia ou sistemas de informação geográfica.</p>
+<h3 id="vetoriza%C3%A7%C3%A3o" tabindex="-1">Vetorização</h3>
+<p><img src="imagens\matriz-vetor.png" alt="ttvheloa: Cartografia e Geoprocessamento Ambiental Av1 - Cartografia e  Geoprocessamento Ambiental"></p>
+<p>Vetorização é o processo de passagem do domínio de imagens formadas por pixel para o domínio de imagens formadas por entidades geométricas. Esse processo é usado para digitalização de mapas: As cartas geográficas são capturadas por scanners e um algoritmo sofisticado extrai da imagem captada as entidades geométricas que irão compor o desenho tais como linhas e caracteres.</p>
+<h3 id="convers%C3%A3o-de-varredura" tabindex="-1">Conversão de Varredura</h3>
+<p>É o processo inverso, onde uma imagems matriciais, matriz de pontos, é convertida para o formato geométrico. Assim as imagens matriciais também podem ser geradas por programas de computador, a partir de descrições de uma cena em termos geométricos. A descrição dos elementos geométricos é feita com o uso de metadados. A passagem do modelo geométrico, situado no espaço geométrico, para o modelo matricial, situado no espaço de imagens, é chamado conversão de varredura, rastelação, elaboração ou síntese.</p>
+<h3 id="principais-formatos-vetoriais" tabindex="-1">Principais formatos Vetoriais</h3>
+<p>Os metarquivos são compostos de registros que descrevem entidades gráficas. Para alguns formatos, essa representação tem forma de texto legível. Os metarquivos contem apenas a definição geométrica para intercâmbio de informação gráfica.</p>
+<p>Alguns formatos de metarquivos comuns são:</p>
+<ul>
+<li><strong>CGM</strong> - padrão bidimensional, independente de fabricante, pouco usado.</li>
+<li><strong>DXF</strong> - Formato tridimensional originário do AUTOCAD, também muito usado com arquivos bidimensionais. Atualmente um padrão de uso geral.</li>
+<li><strong>DWG</strong> - Outro padrão usado no AUTOCAD e atualmente um padrão de uso geral.</li>
+<li><strong>WMF</strong> ( Windows Metafile ) - formato vetorial padrão do Windows, de 16 bits, muito usado para intercâmbio de dados gráficos entre aplicativos Windows.</li>
+<li><strong>EMF</strong> ( Enhanced Metafile ) - formato mais recente, de 32 bits, do formato WMF.</li>
+<li><strong>SVG</strong> ( Scalable Vector Graphics ) - padrão desenvolvido pelo W3C para uso na Web. Seus arquivos obedecem ao padrão XML e podem ser editados com qualquer editor de texto. Oferece suporte a scripts, inclusive para animação. Os Gráficos vetoriais não perdem a qualidade quando são ampliados e também podem ser gravados com compressão Gzip sem perda de dados.</li>
+</ul>
+<h3 id="draw.io" tabindex="-1">draw.io</h3>
+<p><img src="imagens\image-20210314154438385.png" alt="image-20210314154438385"></p>
+<p>O <strong>Draw.io</strong> é um editor gráfico online no qual é possível desenvolver desenhos, gráficos e outros sem a necessidade de usar um software caro e pesado. Ele disponibiliza recursos para criação de qualquer tipo de desenho porém, possui uma parte dedicada à arquitetura da informação.</p>
+<p>Download: https://github.com/jgraph/drawio-desktop/releases</p>
+<pre class='hljs'><code><div>Atividade Prática 1
+
+A google disponibiliza um editor gráfico de imagens no formato svg. O SVG Edit pode ser acessado na maioria dos browsers e está disponível no endereço
+https://code.google.com/p/svg-edit/.
+
+Acesso o endereço https://code.google.com/p/svg-edit/
+Clique no link trunk build demo
+Construa um desenho e salve no formato SVG
+Abra o arquivo SVG gerado e visualize no seu navegador
+Agora abra o arquivo utilizando o editor de textos notepad e veja que o arquivo usa o formato xml.
+</div></code></pre>
+<h3 id="compara%C3%A7%C3%A3o-de-arquivos-vetoriais-e-matriciais" tabindex="-1">Comparação de arquivos vetoriais e matriciais</h3>
+<p>Os arquivos vetoriais possuem as seguintes vantagens em relação aos arquivos de imagens:</p>
+<ol>
+<li>O tamanho é muito menor do que o dos arquivos de imagem;</li>
+<li>Conserva-se a precisão em ampliações. Não há perda da qualidade da imagem;</li>
+<li>As operações de processamento são realizadas de forma mais fácil e eficiente.</li>
+</ol>
+<p>Por outro lado existem alguns problemas com a representação de figuras por arquivos vetoriais:</p>
+<ol>
+<li>Inadequação para a representação de imagens naturais;</li>
+<li>Aspecto dependente do programa e do dispositivo gráfico de exibição;</li>
+<li>Tempo de exibição proporcional à complexidade da imagem. Quanto maior o nível de detalhe geométrico, maior o tempo para exibição.</li>
+</ol>
+<h3 id="fun%C3%A7%C3%B5es-de-um-editor-gr%C3%A1fico-2d" tabindex="-1">Funções de um Editor Gráfico 2D</h3>
+<p>Os editores gráficos bidimensionais são as ferramentas usadas para criação e edição de figuras em formato geométrico. São usados para criação de desenhos dentro de um contexto de multimídia mas podem ser usados para outras áreas de tecnologia e negócios. As funções básicas de um editor de desenhos são:</p>
+<h4 id="cria%C3%A7%C3%A3o-de-primitivas-gr%C3%A1ficas" tabindex="-1">Criação de primitivas gráficas</h4>
+<ul>
+<li>Alteração de atributos ( cor, estilo de contorno, estilo de preenchimento, etc. )</li>
+<li>Construção de estruturas gráficas</li>
+<li>transformações lineares e não lineares</li>
+<li>visualização ( em diferentes graus de ampliação e qualidade )</li>
+</ul>
+<h4 id="programas-para-visualiza%C3%A7%C3%A3o-e-edi%C3%A7%C3%A3o-de-gr%C3%A1ficos-svg" tabindex="-1">Programas para Visualização e Edição de Gráficos SVG</h4>
+<ul>
+<li>Apache Squiggle - Visualizador baseado no framework SVG Batik (Java) disponível em Apache Batik Project</li>
+<li>ABViewer - Visualizador, conversor e editor (comercial) (www.katalogo.com.br)</li>
+<li>Google Docs (Aplicação Web disponível em docs.google.com)</li>
+<li>SVG-edit (Aplicação Web disponível em code.google.com/p/svg-edit)</li>
+<li>GIMP (Software Livre)</li>
+<li>Inkscape (Software Livre)</li>
+<li>Blender ( Software Livre )</li>
+<li>Xara (Software Livre para Linux - Versão Proprietária para Windows)</li>
+<li>Adobe Illustrator</li>
+<li>Corel Draw</li>
+<li>Microsoft Visio 2003</li>
+</ul>
+<h4 id="recomenda%C3%A7%C3%B5es%3A" tabindex="-1">Recomendações:</h4>
+<p>O programa GIMP possui uma versão portável que pode ser instalada diretamente no pen-drive ou em um hd externo. O GIMP portável pode ser baixado no endereço http://portableapps.com/apps/graphics_pictures/gimp_portable.</p>
+<p>O programa Blender também possui uma versão portável que pode ser baixada no endereço:
+http://portableapps.com/apps/graphics_pictures/blender_portable</p>
+<pre class='hljs'><code><div>Atividade Prática 2
+
+Pesquisar na Internet pelo menos duas ferramentas da lista acima e descrever os principais recursos, sistemas operacionais suportados e funcionalidades
+de cada ferramenta. Fazer um compartativo entre as duas ferramentas. Anotar no caderno as funcionalidades, recursos e requisitos de cada ferramenta.
+Baixar a ferramenta Blender, versão portável, da página de recursos.
+Utilizando a ferramenta Blender, fazer os exercícios 1, 2 e 3 que estão no site na página recursos.
+</div></code></pre>
+<h3 id="primitivas-geom%C3%A9tricas" tabindex="-1">Primitivas Geométricas</h3>
+<p>As entidades gráficas são compostas por primitivas gráficas que são as entidades mais elementares e que são fornecidas diretamente pelos programas gráficos utilizados. São descritas em termos da álgebra, através de equações. Uma classificação delas pode ser feita pelo grau das equações usadas para descrevê-las. As primitivas mais usadas são as lineares ( primeiro grau ), as quadráticas ( segundo grau ) e as cúbicas ( terceiro grau ). As primitivas de cada grau podem ser bidimensionais ou tridimensionais.</p>
+<h4 id="primitivas-lineares" tabindex="-1">Primitivas Lineares</h4>
+<p>As primitivas lineares bidimensionais são as entidades básicas às quais as demais primitivas são reduzidas. São baseadas em retas e polígonos. São suportadas diretamente pelo hardware de aceleradores e coprocessadores gráficos. São usadas as seguintes primitivas lineares:</p>
+<ul>
+<li>retas - São os elementos básicos dos modelos vetoriais</li>
+<li>poligonais - São sequências de vértices unidos por retas</li>
+<li>polígonos - São áreas fechadas que são delimitadas por poligonais fechadas ( em que o primeiro e o último vértice coincidem ).</li>
+</ul>
+<p>Essas primitivas podem ser geradas por um programa em um dos formatos gráficos textuais, como o SVG.</p>
+<h4 id="primitivas-n%C3%A3o-lineares" tabindex="-1">Primitivas Não Lineares</h4>
+<p>Outros tipos de primitivas encontradas nos programas gráficos bidimensionais. São baseados em parábolas e curvas.</p>
+<ul>
+<li>Cônicas - Curvas expressas por equações do segundo grau. Exemplo: círculos, eclipses, parábolas, hipérboles, etc.</li>
+<li>Curvas Cúbicas - Podem ser expressas por equações do terceiro grau. Exemplo: Curva de Bézier
+Textos - Representam cadeias de caracteres impressos. O Texto é representado como caracteres que são desenhados.</li>
+<li>Áreas - Representam regiões de formato arbitrário, descritas por mapas de pixels.</li>
+</ul>
+<h4 id="curvas-c%C3%BAbicas" tabindex="-1">Curvas Cúbicas</h4>
+<p>As curvas cúbicas são formadas pela concatenação de trechos de curva que podem ser descritos por equações de terceiro grau. Elas tem a propriedade de conservar a curvatura nas ampliações. A grande vantagem das cúbicas é que elas permitem modelagem rápida e flexível de contornos, incluindo os contornos desenhados à mão livre.</p>
+<h4 id="textos" tabindex="-1">Textos</h4>
+<p>Os caracteres de texto representam um conjunto de símbolos de grande importância em qualquer aplicação. Em ambientes gráficos e multimídia o papel do texto é valorizado pela variedade de formas que eles podem adquirir pois o texto tambem é representado como desenho, uma imagem. A escolha da representação gráfica para os textos é fundamental para a legibilidade, beleza, estética e qualidade de um título multimídia. Os atributos dos textos incluem:</p>
+<ul>
+<li>O tipo da fonte utilizada</li>
+<li>O tamanho da fonte</li>
+<li>Os estilos de texto</li>
+<li>O alinhamento do texto</li>
+<li>A cor do texto</li>
+<li>Posição e orientação do texto</li>
+</ul>
+<h3 id="estruturas-gr%C3%A1ficas" tabindex="-1">Estruturas Gráficas</h3>
+<p>As estruturas gráficas são usadas na composição dos desenhos e são reaproveitadas em mais de uma parte de um desenho. São recursos para complementar o trabalho de desenho. Os metarquivos podem ser mais do que coleções não estruturadas de entidades gráficas. Os seguintes tipos de extensões permitem que os arquivos sejam mais compactos e de uso mais flexível:</p>
+<ul>
+<li>Símbolos - Entidades que podem ser repetidas em diferentes partes do desenho.</li>
+<li>Hierarquias Gráficas - Entidades formadas a partir da composição de primitivas e de entidades mais simples.</li>
+<li>Linguagem Gráficas - Recursos semelhantes aos de linguagens de programação, incluindo macros, procedimentos, scripts e estruturas condicionais e de repetição. A linguagem PostScript é usada para programação de desenhos em impressoras a laser e dispositivos de cópia de alta resolução.</li>
+</ul>
+<h3 id="transforma%C3%A7%C3%B5es-gr%C3%A1ficas-de-um-desenho" tabindex="-1">Transformações Gráficas de um Desenho</h3>
+<p>Basicamente temos dois tipos de transformações gráficas em um Desenho: As Transformações Bidimensionais e as Transformações de Visualização.</p>
+<h4 id="transforma%C3%A7%C3%B5es-bidimensionais" tabindex="-1">Transformações Bidimensionais</h4>
+<p>As transformações lineares são as operações que podem ser aplicadas sobre as entidades geométricas que podem ser descritas por fórmulas lineares, baseadas em equações do primeiro grau. Em termos computacionais são operações fáceis de calcular e rápidas.</p>
+<h4 id="as-transforma%C3%A7%C3%B5es-lineares-incluem%3A" tabindex="-1">As transformações lineares incluem:</h4>
+<ul>
+<li>Translações - Os pontos de uma entidade tem suas coordenadas adicionadas de um par de valores constantes resultando no deslocamento.</li>
+<li>Rotações - Os pontos de uma entidade são girados de um ângulo constante em relação a um ponto de referência.</li>
+<li>Mudanças de Escala - Os pontos de uma entidade tem suas coordenadas multiplicadas por um par de valores constantes, os fatores de escala.</li>
+<li>Cisalhamentos - Os pontos tem uma coordenada adicionada a partir de um valor proporcional a outra coordenada. O resultado é a transformação de um retângulo em um paralelogramo oblíquo.</li>
+</ul>
+<h4 id="transforma%C3%A7%C3%B5es-de-visualiza%C3%A7%C3%A3o" tabindex="-1">Transformações de Visualização</h4>
+<p>São operações que transformam a figura definida de um espaço de aplicação em um espaço de exibição. O processamento das escalas da figura é feito pelo programa e o desenhista pode dimensionar a figura em milímetros, metros ou quilômetros, dependendo do que for mais adequado para a aplicação.
+A transformação de visualização, a partir das entidades geométricas expressas nas unidades escolhidas pelo desenhista, gera as entidades equivalentes nas unidades do monitor ou impressora.</p>
+<h4 id="transforma%C3%A7%C3%B5es-n%C3%A3o-lineares" tabindex="-1">Transformações não lineares</h4>
+<p>Nos desenhos bidimensionais algumas transformações não lineares são usadas para efeitos especiais. Essas transformações incluem:</p>
+<ul>
+<li>Operações pseudotridimensionais, como extrusão e falsa perspectiva;</li>
+<li>deformações não lineares, como envoltórias e metamorfose.</li>
+</ul>
+<h2 id="%C3%A1udio" tabindex="-1">Áudio</h2>
+<h3 id="o-que-%C3%A9-som" tabindex="-1">O que é som</h3>
+<iframe width="700" height="394" src="https://www.youtube.com/embed/WLM6-By0qBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>https://www.youtube.com/embed/WLM6-By0qBg</p>
+<p>Áudio é causado pelo distúrbio da pressão de ar que alcança o tímpano. Quando a freqüência do distúrbio de ar está na faixa de 20 Hz a 20.000 Hz ele é audível. A maioria dos sistemas multimídia trabalham com esta faixa de freqüência. Outro parâmetro usado para a medição do som é a amplitude (medido em decibéis - dB), variação que causa o som leve ou pesado. Por exemplo, o limiar da dor é de 100 a 120 dB.</p>
+<p>O ouvido humano é o órgão responsável pela nossa audição e pelo nosso equilíbrio. O ouvido encontra-se dividido em três partes: o ouvido externo, o ouvido médio e o ouvido interno.</p>
+<p>O ouvido externo é constituído pelo pavilhão auditivo, pelo canal auditivo e pelo tímpano e é responsável pelo direcionamento das ondas sonoras para as regiões mais internas do ouvido. O ouvido médio que se encontra após o tímpano é constituído por três ossos interligados, o martelo, a bigorna e o estribo, onde as ondas sonoras são amplificadas. É igualmente  constituído pela trompa de Eustáquio que mantém a pressão nesta zona. O ouvido interno é onde se situam as estruturas responsáveis pelo equilíbrio e pela conversão das ondas sonoras em sinais elétricos é constituído pela cóclea, órgão que distingue a freqüência e a intensidade do som, os canais semicirculares e o nervo auditivo.</p>
+<p>A vibração de alguma coisa produz como resultado várias ondas de pressão em todas as direções e, uma vez chegando aos tímpanos experimentamos estas vibrações como sons. No ar, e ao nível do mar, o som se propaga a uma velocidade de ~1.207 Km/h (1 Mach).  Som é energia, como a das ondas que quebram em uma praia; muito volume pode danificar os mecanismos delicados de recepção de som dos tímpanos.</p>
+<p>Os níveis de pressão do som (intensidade ou volume) são medidos em decibéis ou dB; uma medida de decibel é a taxa entre um ponto de referência escolhido em uma escala logarítmica e o nível que realmente é experimentado.</p>
+<iframe width="700" height="394" src="https://www.youtube.com/embed/FLUwYCHFVas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>https://www.youtube.com/embed/FLUwYCHFVas</p>
+<h4 id="canais-de-som" tabindex="-1">Canais de Som</h4>
+<p>Nas primeiras experiências de armazenamento de som ainda em formato analógico, as músicas (ou sons) eram armazenadas em um único canal, chamado monofônico. Com a sucessiva necessidade de se reproduzir o som com mais realidade e sensação de envolvimento, criou-se um segundo canal para que se pudesse, através do aparelho reprodutor, transmitir a sensação de localização e movimento para o ouvinte em relação ao som emitido e vice-versa.</p>
+<p>Aos sistemas capazes de reproduzir tais canais, chamou-se de estéreo (stereo).  Com a evolução do cinema e grandes salas de teatro, o som estéreo tornou-se insuficiente, dando lugar aos chamado som multi-canal.</p>
+<h4 id="som-multicanal" tabindex="-1">Som Multicanal</h4>
+<p>Muito embora o som multicanal ou som surround já estivesse pontualmente presente nas salas de cinema desde o início da década de 50, o grande boom ocorreu com o lançamento de “Guerra nas Estrelas”, de George Lucas, em 1977. O seu grande objetivo foi, e continua a ser, o tornar a experiência cinematográfica mais intensa, proporcionando uma total imersão no coração da ação. Mas, se durante muitos anos este tipo de sensações só foi possível numa sala de cinema, a verdade é que hoje em dia qualquer pessoa pode desfrutar no seu próprio lar de tecnologias altamente sofisticadas que recriam com todos os pormenores um ambiente de cinema.</p>
+<p>Dolby Stereo, Dolby Surround, DTS, THX, são alguns exemplos de formatos de som multicanal.</p>
+<p>Este tipo de codificação permite reunir mais de um canal de informação (tal como Frontal Left – FL, Central – C, Frontal Right – FR, Surround Right – SR, Surrond Left – SL, Low Frequency Effects – LFE etc) em canais estéreo, passíveis de serem reproduzidos em equipamentos estereofônicos.</p>
+<img src="imagens\54043199373413643__pt-BR__Original.png" alt="Uso de um sistema de 7.1/5.1.2 canais" style="zoom:67%;" />
+<h3 id="representa%C3%A7%C3%A3o-digital-do-som" tabindex="-1">Representação Digital do Som</h3>
+<p>Em sistemas analógicos o sinal sonoro é representado por um sinal magnético ou elétrico, com amplitude proporcional à amplitude do sinal acústico original. Nos dispositivos e sistemas eletrônicos, incluindo aí os computadores, o sinal sonoro é representado por uma sequência de números, que são compostas por bits 0 e 1.</p>
+<img src="imagens\1200px-Digital.signal.svg.png" alt="Som digital – Wikipédia, a enciclopédia livre" style="zoom:80%;" />
+<p>São exemplos de sistemas digitais de som:</p>
+<ul>
+<li>Redes e sistemas telefônicos digitais;</li>
+<li>Equipamentos de registro digital de som ( CD e DVD )</li>
+<li>Computadores e dispositivos móveis com interface de voz ( comando de voz e reconhecimento de voz )</li>
+</ul>
+<p>Os sistemas digitais são muito mais imunes à ruídos do que os sistemas analógicos e isso proporciona melhor qualidade do som nas operações de reprodução de um sinal digital.</p>
+<p>Se um sinal analógico  for copiado sucessivas vezes a última cópia tem uma qualidade muito abaixo da qualidade da cópia original. Um exemplo disso são as cópias das antigas fitas K7. Uma copia feita a partir de outras cópias tinha qualidade de som muito inferior.</p>
+<p>Porém em um sinal digital a cópia é tão boa quanto a cópia original, não importando o número de cópias que sejam feitas ou se a cópia é feita a partir de uma outra cópia ou da cópia original. A qualidade do som em um sinal digital se mantêm em processos de cópia desde que o sistema digital estiver funcionando corretamente.</p>
+<h4 id="digitaliza%C3%A7%C3%A3o-do-som" tabindex="-1">Digitalização do Som</h4>
+<p><img src="imagens\CF20050829c.jpg" alt="Técnicas &amp; Truques no Estado de Minas"></p>
+<p>O processo de conversão do som analógico para som digital consiste em converter o sinal elétrico em um sinal digital é chamado de digitalização do som. O sinal elétrico analógico, proveniente de microfones ou de equipamentos analógicos de reprodução, é convertido em uma sequência de números, num processo chamado conversão analógico-digital, ou conversão A/D.</p>
+<p>O processo inverso, que reproduz o sinal analógico de som, pronto para ser amplificado e enviado aos alto-falantes, é chamado de conversão digital-analógica, ou conversão D/A.</p>
+<p>A tendência é que a conversão de som no formato analógico para o formato digital, processo de digitalização, seja a conversão mais comum e que gradativamente o formato analógico seja abandonado.</p>
+<p>Para que um som possa ser armazenado em meio digital, ele precisa ser convertido para o formato digital, através de um processo chamado <em>sampling</em>.</p>
+<p><em>Sampling</em>: sampling é o processo de captar momentos de um sinal analógico em transformação (como pequenas &quot;fotografias&quot; digitais), convertê-los em sinal digital e corrê-los numa sucessão contínua, reproduzindo-se, desta forma, o sinal original.</p>
+<p><em>Sampling rate</em>: é a freqüência (medida em Hertz) da fotografia tirada do sinal analógico. Quanto maior for este número, mais perto do original será a reprodução digital. No caso do CD, a sampling rate – ou a quantidade de fotografias tiradas por segundo – é de 44,1KHz, ou seja, são tiradas mais de 44 mil imagens do som por segundo.</p>
+<p><em>Sample size</em>: é o tamanho (medido em bits) da fotografia tirada do sinal analógico.</p>
+<p>Quanto maior for o <em>sample size</em> (ou resolução), melhor será a representação do original. Um CD tem uma resolução de 16 bits.</p>
+<p>A figura a seguir traz a representação de ondas sonoras em um trecho musical em formato digital. À esquerda temos a representação gráfica simples de uma única amostra da onda, enquanto à direita temos a representação em 3D de sucessivas amostras da onda, ou seja, a execução contínua do som.</p>
+<p><img src="imagens\image-20210325214835410.png" alt="image-20210325214835410"></p>
+<h4 id="digitaliza%C3%A7%C3%A3o%2C-amostragem-e-quantifica%C3%A7%C3%A3o" tabindex="-1">Digitalização, Amostragem e Quantificação</h4>
+<p>Esta seção apresenta a forma de digitalização dos vários tipos de mídias de apresentação. Digitalização aqui é o processo envolvido na transformação de sinais analógicos em sinais digitais:</p>
+<ul>
+<li><strong>Sinal analógico</strong> é uma medida física que varia continuamente com o tempo e/ou espaço. Eles são descritos por uma função dependente apenas do tempo (s=f(t)), dependente apenas do espaço (s=f(x,y,z)), ou dependente do tempo e do espaço (s=f(x,y,z,t)). Sinais analógicos são produzidos por sensores que detectam fenômenos físicos (que simulam os sensos humanos) e os transformam em uma medida que toma a forma de uma corrente ou tensão elétrica. A precisão é ditada pelas características dos sensores.</li>
+<li><strong>Sinais digitais</strong> são seqüências de valores dependentes do tempo ou do espaço codificados no formato binário.</li>
+</ul>
+<p>Para a conversão de sinais analógico em digital é necessário a realização de três passos: amostragem, quantificação e codificação.</p>
+<p><img src="imagens\image-20210327190407281.png" alt="image-20210327190407281"></p>
+<p><strong>Figura</strong>: Conversão A/D [Lu, 96]: (a) sinal analógico; (b) pulsos de amostragem; (c) valores
+amostrados e intervalos de quantificação; (d) seqüência digital</p>
+<h5 id="amostragem" tabindex="-1">Amostragem</h5>
+<p>Nesta etapa um conjunto discreto de valores analógicos é amostrado em intervalos temporais (p.e., para sons) ou espaciais (p.e., para imagens) de periodicidade constante, como apresentado na <strong>figura a</strong>. A freqüência de relógio é chamado de taxa de amostragem ou freqüência de amostragem. O valor mostrado é mantido constante até o próximo intervalo. Isto é realizado através de circuitos <em>sampling and hold</em>. Cada uma das amostras é analógica em amplitude: ele tem qualquer valor em um domínio contínuo. Mas isto é discreto no tempo: dentro de cada intervalo, a amostra tem apenas um valor.</p>
+<h6 id="teorema-de-nyquist" tabindex="-1">Teorema de Nyquist</h6>
+<p>Se um sinal analógico contem componentes de freqüência até f Hz, a taxa de amostragem deve ser ao menos 2f Hz. Na prática, esta freqüência é um pouco maior que 2f Hz. Por exemplo, a taxa de amostragem de CDaudio é de 44,1 kHz, e dos tapes de áudio digital (DAT) é de 48kHz para cobrir uma faixa audível de freqüência de 20 kHz. Outro exemplo, os componentes principais de freqüência da voz humana estão dentro de 3,1 kHz, com isto os sistemas de telefonia analógicos limitam o sinal transmitido a 3.1 kHz; é comum usar uma freqüência de amostragem de 8 kHz para converter este sinal em digital.</p>
+<h5 id="quantifica%C3%A7%C3%A3o" tabindex="-1">Quantificação</h5>
+<p>O processo de converter valores de amostras contínuas em valores discretos é chamado de quantificação. Neste processo nós dividimos o domínio do sinal em um número fixo de intervalos. Cada intervalo tem o mesmo tamanho e recebe um número. Na <strong>figura c</strong> estes intervalos são numerados de 0 a 7. A cada amostra dentro de um intervalo é atribuído o valor do intervalo.</p>
+<p>O tamanho deste intervalo de quantificação é chamado de passo de quantificação. A técnica que utiliza o mesmo passo de quantificação é chamada modulação <strong>PCM (Pulse Coded Modulation)</strong>. Algumas vezes, nem todos os valores amostrados são retidos após a quantificação. No caso ilustrado pela <strong>figura c</strong>, todos os valores amostrados foram retidos.</p>
+<h5 id="codifica%C3%A7%C3%A3o" tabindex="-1">Codificação</h5>
+<p>A codificação consistem em associar um conjunto de dígitos binários, chamado de <em>codeword</em>, a cada valor quantificado. No caso da <strong>figura d</strong>, oito níveis de quantificação são usados. Estes níveis podem ser codificados usando 3 bits, assim cada amostra é representada por 3 bits.</p>
+<p>Em algumas aplicações de telefonia, a digitalização da voz humana utiliza 16 bits por amostra, que então leva a 216 ou 65.536 passos de quantificação. Em outras aplicações de compressão de voz, algumas vezes, apenas 8 quantificações por bits são necessários, produzindo apenas 256 passos de quantificação.</p>
+<h5 id="taxa-de-bits" tabindex="-1">Taxa de bits</h5>
+<p>Taxa de bits é definida como o produto entre taxa de amostragem e o número de bits usados no processo de quantificação. Por exemplo, supondo uma freqüência de 8k Hz e 8 bits por amostra, a taxa de bits necessária à telefonia é igual a 8000x8 = 64 kbps.</p>
+<h3 id="%C3%A1udio-em-multim%C3%ADdia" tabindex="-1">Áudio em Multimídia</h3>
+<p>Existem questões muito interessantes relacionadas mais à acústica do que propriamente ao volume e ao pitch. Há vários textos que discutem, por exemplo, o fato de o dó em um violão não soar como o de um piano, ou do fato de uma criança poder ouvir sons em determinadas freqüências impossíveis de serem ouvidas por adultos com audição prejudicada devido à idade.</p>
+<p>Em projetos multimídia normalmente não se exige conhecimentos especializados em harmonia, intervalos, ondas notações, oitavas ou física de acústica ou vibração. Entretanto é necessário saber:</p>
+<ul>
+<li>Como criar sons.</li>
+<li>Como gravar e editar sons.</li>
+<li>Como incorporar sons ao software.</li>
+</ul>
+<p>O som pode ser usado imediatamente tanto no Macintosh quanto no PC, pois os bips e avisos do sistema estão disponíveis assim que o sistema operacional é instalado. Em versões do Windows inferiores ao W2000, normalmente quando se executa arquivos do tipo WAV por meio de um alto falante da placa do PC todas as interrupções são desativadas automaticamente, fazendo o mouse ou o teclado ficarem inativos ao executar os sons.</p>
+<p>Pode-se digitalizar som a partir de qualquer fonte natural ou pré-gravada (microfone, fitas K7 etc.). O som digitalizado é “amostrado”, isto é, em uma pequena fração de segundo uma amostra do som é capturada e armazenada como informação digital (bits e bytes). A freqüência com que as amostras são capturadas determina a taxa de amostragem. A quantidade de  informações armazenadas a cada amostragem determina o tamanho da amostra. Quanto maior a freqüência de captura e mais dados armazenados maior a resolução e a qualidade do som capturado.</p>
+<p>É impossível reconstruir a forma da onda original se a freqüência da amostragem for muito baixa. As três freqüências de amostragens mais usadas na multimídia são 44.1kHz, 22.05 kHz e 11.025 KHz. Os tamanhos das amostragens são:</p>
+<ul>
+<li>8 bits, 256 unidades para descrever a faixa dinâmica ou amplitude (o nível de som capturado naquele momento)</li>
+<li>16 bits, 65536 unidades para descrevera faixa dinâmica.</li>
+</ul>
+<p>Existe um padrão internacional, ISO 10149, para codificar digitalmente o estéreo de alta
+qualidade do mercado consumidor de música em CD. Os desenvolvedores deste padrão declaram que o tamanho da amostragem de áudio e a taxa de amostragem (16 bits @ 44,1 kHz) permitem a reprodução exata de todos os sons que os seres humanos podem ouvir.</p>
+<p>Para armazenar 11 segundos de som stereo pode-se gastar até 1 MB de disco. O som monoaural (mono) normalmente consome a metade dos recursos do stereo. Técnicas de compactação podem permitir a redução em 8 vezes o consumo de espaço, perdendo-se entretanto na fidelidade do som. Para saber o consumo de disco para apenas alguns segundos de gravação, podem-se utilizar as fórmulas:</p>
+<p>Bytes por segundo = (taxa de amostragem * bits por amostra) / 8</p>
+<p>Gravação mono: Tamanho_arquivo = taxa_amostragem x duração_gravação x (bits por amostra / 8) x 1</p>
+<p>Gravação stereo: Tamanho_arquivo = taxa_amostragem x duração_gravação x (bits por amostra / 8) x 2</p>
+<p>No ato do armazenamento em disco surgem algumas perguntas importantes e que se não respondidas corretamente podem levar a ocorrência de graves problemas na reprodução do som, são elas:</p>
+<ol>
+<li>Quanta qualidade de som pode-se sacrificar para reduzir o armazenamento?</li>
+<li>Qual a melhor técnica de compactação?</li>
+<li>O som compactado funcionará na plataforma hardware (PC)?</li>
+</ol>
+<h3 id="midi-%E2%80%93-musical-instrument-digital-interface" tabindex="-1">MIDI – Musical Instrument Digital Interface</h3>
+<p>É um padrão, de domínio público da indústria, desenvolvido no início dos anos 80 que permite que os sintetizadores de música e som de diferentes fabricantes se comuniquem entre si enviando mensagens via cabos conectados nos dispositivos. Dentro da MIDI há também um protocolo para passar descrições detalhadas de uma partitura musical tais como as notas, as seqüências de notas e qual instrumento as tocarão. Um arquivo MIDI é significativamente menor (por segundo de som transmitido para o usuário) do que arquivos equivalentes de formas de ondas digitalizadas.</p>
+<p>Necessita-se de um programa seqüenciador e de um sintetizador de som (em geral existente nas placas de som de PCs). Um teclado MIDI também é útil para simplificar a criação de partituras musicais. Entretanto o mesmo não é necessário para a execução da música. O programa seqüenciador grava suas ações no teclado MIDI (ou em outro dispositivo) em tempo real e tocará exatamente as notas que você tocou no teclado; uma cópia da partitura também pode ser impressa no papel.</p>
+<p>Os sons MIDI são gerados a partir de:
+ Fórmulas matemáticas (síntese FM), mais baratas.</p>
+<p> Gravações digitais curtas de instrumentos reais (amostragens), melhor fidelidade.</p>
+<p> A escolha entre estas duas técnicas envolve considerações de hardware e custos.</p>
+<p>Criar arquivos MIDI é tão complexo quanto gravar bons arquivos de amostragens, então é melhor investir para encontrar alguém que já tenha configurado o equipamento e as habilidades para criar sua partitura, em vez de investir em hardware e aprender música. Para uma pessoa que conhece música “de ouvido”, mas não consegue ler uma partitura, a MIDI é de grande utilidade. O programa seqüenciador pode ajudar a criar a música ideal para as apresentações em computador.</p>
+<p>A maioria dos desenvolvedores grava seus materiais de som em fitas K7 como primeiro passo no processo de digitalização.</p>
+<p>Com a fita, é possível fazer muitas tomadas do mesmo som ou voz, ouvir todas elas e selecionar as melhores para digitalizar. Gravando em uma mídia barata em vez de diretamente no disco, você evita preencher seu disco rígido com “lixo”.</p>
+<p>Projetos que requerem som com a qualidade de CD (41,1 kHz e 16 bits) devem ser desenvolvidos em estúdios profissionais. A gravação de som de alta fidelidade é uma arte especializada, uma habilidade aprendida em grande parte por tentativas e erros, como na fotografia. Ao desejar fazê-lo por si só em níveis de qualidade de CD, o desenvolvedor deve estar preparado para investir em uma sala tratada acusticamente, com amplificadores e equipamentos de gravação de alta fidelidade e microfones sofisticados.</p>
+<p>Gravações em 22,05 kHz podem ser realizadas em gravadores K7, por exemplo: gravações de conversas telefônicas. Gravadores de vídeo K7 normalmente possuem excelentes circuitos de áudio stereo e foram muito utilizados no início. Uma gravação em alta fidelidade requer grande espaço de memória: 176,4 Kb por cada segundo de áudio em qualidade stereo amostrado em 16 bits a 44,1 kHz por canal.</p>
+<h3 id="dat-%E2%80%93-digital-%C3%A1udio-tape" tabindex="-1">DAT – Digital áudio tape</h3>
+<p>Fornecem gravação em 16 bits a 44,1 kHz e capacidade de reprodução com um consumo de memória de 176,4 Kb por cada segundo de áudio em qualidade stereo gravado. Esse sistema é muito preciso e poderá gravar até ruídos de fundo, estalos do microfone e tosses vindas da sala ao lado, necessitando de um bom editor para eliminar estes ruídos.</p>
+<p>Há um mínimo aceitável de adequação que satisfará o público, mesmo quando este nível não for o melhor que esta tecnologia, dinheiro, tempo ou esforço podem comprar. Um esboço comparativo entre MIDI e DAT encontra-se na tabela a seguir.</p>
+<p>Gravações de efeitos sonoros (buzinas, ruídos de motores etc.) normalmente não exigem tanta fidelidade quanto à gravação da voz falada ou efeitos sonoros que requerem fundo silencioso (cantar de pássaros, por exemplo).</p>
+<p>A freqüência de amostragem determina o limite em que as freqüências de áudio podem ser reproduzidas digitalmente. De acordo com o Teorema de Nyquist, é necessário no mínimo de duas amostras (por ciclo) para representar uma onda sonora. Então para representar o som com uma freqüência de 440 Hz, é necessário amostrar o som em uma taxa mínima de 880 amostras por segundo, conforme a equação:</p>
+<p>Taxa de amostragem = 2 x Freqüência mais alta</p>
+<h3 id="o-som-profissional" tabindex="-1">O Som Profissional</h3>
+<p>Como na fotografia em que a luz, as sombras e a programação do tempo de exposição da foto definem a sutil diferença entre o amador e o profissional, uma boa sessão de gravação de som requer conhecimento do hardware e do software a serem utilizados, e um entendimento técnico do som ou da voz a ser gravada (para interromper tons graves, falas ou chiados em alta freqüência) e um sentido do ambiente (estúdio). Como os chefes da culinária ou químicos industriais, alguns profissionais incorporam um toque de ruído natural nos seus silenciosos ambientes de trabalho, para dar a impressão de a gravação ser mais real e menos artificial.</p>
+<p>Em um projeto elaborado com vários sons, deve-se manter um bom banco de dados, controlando o material original – somente no cadê de precisar reverte-lo quando a unidade de disco falhar. Esse banco de dados é particularmente importante porque pode ser necessário dar aos arquivos de som nomes como SND0094A.WAV ou CAP1-3.WAV; esses nomes não conterão muitas pistas sobre o conteúdo real do arquivo e assim, uma referência cruzada resolve o problema da identificação.</p>
+<h3 id="padr%C3%B5es-de-compacta%C3%A7%C3%A3o" tabindex="-1">Padrões de Compactação</h3>
+<p>Considerando o ambiente da internet, um aspecto importante da comunicação é a transferência de dados entre o servidor e o cliente, visto que o tempo de transferência é de suma importância.</p>
+<p>Ao se transmitir uma locução, esta é transformada em arquivos de som e caso o arquivo seja muito grande, o tempo necessário para a transferência aumenta muito. Esse aumento de tempo acaba deteriorando a qualidade do som que chega ao computador cliente. O tempo necessário para a transferência do som pode ser diminuído usando a compressão.</p>
+<p>A compressão é a redução do tamanho físico do dado a ser transmitido de modo a poder ocupar um espaço menor na memória. Arquivos compactados são mais fáceis de transmitir visto a redução de seu tamanho reduzido, o que resulta na diminuição do tempo necessário para a transferência.</p>
+<p>Existem padrões de compressão que permitem obter som com baixa perda de fidelidade com um tamanho de arquivo muitas vezes menor do que o original, permitindo que o som seja transmitido pela internet de maneira rápida e eficiente. Entretanto não existe, ainda, um consenso entre os vários algoritmos de compactação, de qual seja o melhor. A tab. 4.2 apresenta uma comparação de desempenho de sistemas de áudio. Alguns dos principais padrões estão descritos a seguir.</p>
+<ul>
+<li>MPEGplus baseado no padrão MPEG1-Layer 2, similar ao MP3 (Motion Picture Experts Group Layer III).</li>
+<li>Windows Media Áudio, ou &quot;ASF“, é um algoritmo que, apesar de desenvolvido pela Microsoft, não é fornecido com o Windows.</li>
+<li>Real Áudio é um dos formatos de compressão mais antigos, foi desenvolvido inicialmente para aplicações de voz e posteriormente foram desenvolvidos algoritmos para música e vídeo.</li>
+<li>MPEG Layer III é o próprio que MP3, aberto e disponível para qualquer um utilizar é a melhor relação custo-benefício do momento.</li>
+<li>MOV (QDesign2) é o novo código QuickTime para áudio.</li>
+<li>TwinVQ produzido pela empresa NNT é, a princípio, o principal concorrente do MP3.</li>
+</ul>
+<p>Os exemplos de mídia digital a seguir mostram os requisitos de espaço de armazenamento para um segundo de gravação de um arquivo de áudio:</p>
+<ul>
+<li>Um sinal de áudio de qualidade de telefone sem compressão (8 bits amostrado em 8 kHz) leva a uma largura de banda de 64 kbps e necessita de 8 KB para armazenar um segundo de gravação;</li>
+<li>Um sinal de áudio stereo de qualidade de CD sem compressão (16 bits amostrado em 44,1 kHz) leva a uma largura de banda de 44,1 kHz x 16 bits = 705 kbps e necessita de 88.2 KB para armazenar um segundo de gravação.</li>
+</ul>
+<h3 id="processamento-digital-do-som" tabindex="-1">Processamento Digital do Som</h3>
+<p>Um computador configurado com multimídia suporta pelo menos 3 tipos de som:</p>
+<ul>
+<li>Som analógico</li>
+<li>Som produzido pelo reprodução de arquivos de áudio. O padrão Windows é o formato WAV.</li>
+<li>Som sintetizado a partir de arquivos de eventos musicais, que no padrão Windows é o formato .MIDI.</li>
+</ul>
+<h3 id="interfaces" tabindex="-1">Interfaces</h3>
+<p>Para processamento de som, tanto reprodução quando gravação, os computadores devem ter disponíveis interfaces de áudio.</p>
+<p>As principais interfaces de áudio são:</p>
+<ul>
+<li>entrada e saída de áudio analógico;</li>
+<li>sintetizador interno;</li>
+<li>entrada de áudio de CD-ROM;</li>
+<li>misturador analógico;</li>
+</ul>
+<p>A entrada e saída de áudio analógico permite integração com dispositivos analógicos de som como cassetes, microfones, mesas de som e amplificadores de tecnologia analógica. Esta integração é necessária para que se possa realizar a digitalização.</p>
+<p>Os sintetizadores internos reproduzem som a partir de arquivos de eventos musicais.</p>
+<p>A entrada de áudio de CD-ROM incorpora à interface de áudio uma entrada interna para áudio gerado em CD-ROM e com isso a reprodução de som no formato digital.</p>
+<p>O misturador analógico permite a combinação de sons provenientes de entrada e saída de áudio analógico e ainda de microfones e dispositivos externos.</p>
+<h2 id="v%C3%ADdeo" tabindex="-1">Vídeo</h2>
+<h3 id="sistemas-digitais-de-v%C3%ADdeo" tabindex="-1">Sistemas Digitais de Vídeo</h3>
+<p>Um vídeo pode ser definido como uma imagem em movimento, ou seja, uma sucessão de imagens em um período de tempo. Aliado às imagens, pode existir a emissão de som.</p>
+<p>Os primeiros sistemas digitais foram gerados em processadores de efeitos conhecidos como sistemas de ótica digital. Nesses equipamentos, cada quadro de sinal de vídeo era digitalizado, era processado por um algoritmo e então reproduzido em tempo real. Este processo permite conseguir uma grande variedade de efeitos com vídeo.</p>
+<p>Como o fluxo de dados necessário para o vídeo digital é muito rápido era necessário que os dispositivos de ótica digital tivessem eletrônica muito rápida para conseguir realizar o processamento do vídeo na taxa imposta pelo fluxo de dados. Por isso, os primeiros sistemas digitais eram em geral muito caros. Hoje em dia, com a evolução do hardware os efeitos de ótica digital são comuns em editores digitais de vídeo.</p>
+<p>No momento, em todo o mundo, os sistemas analógicos de vídeo estão em desuso. No Brasil a transição dos sistemas analógicos para os sistemas digitais está em andamento e encontra-se no processo de finalização.</p>
+<h3 id="sistema-de-v%C3%ADdeo" tabindex="-1">Sistema de Vídeo</h3>
+<p>Os níveis de sistemas vídeo dividem-se em:</p>
+<ul>
+<li>Consumidor: equipamentos domésticos, com por exemplo, o VHS, 8mm, DVD;</li>
+<li>Industrial: produtoras de vídeo e de multimídia, como por exemplo, o Hi8, S-VHS, Betacam, Betacam SP, U-Matic;</li>
+<li>Difusão: emissoras de TV, como por exemplo, o Tipo C e os sistemas digitais;</li>
+<li>HDTV: alta definição. Modelo em processo de instalação.</li>
+</ul>
+<p>Nos sistemas das grandes produtoras de vídeo (cinema e televisão), o surgimento do vídeo se dá partir da criação de uma fita mestra. Com ela, as imagens sofrem justaposição, intercalação e combinação de material de vídeo, que foi originalmente gravado ou sintetizado.</p>
+<p>Neste processo, o vídeo está sujeito a perdas em cada geração de cópia. Pode ser feita a edição em nível de quadros e a indexação via código de tempo. Esses códigos de tempo são chamados de códigos SMPTE (mensagens indicativas de tempo) e permitem o posicionamento com precisão de quadro. Os códigos, que são mensagens digitais, registram hora, minuto, segundo e quadro do vídeo. Com isso pode ser feita uma gravação longitudinal, com trilhas separadas ou uma gravação vertical, com o retraço vertical. Hoje em dia, a edição controlada por computador, utilizando-se os seguintes componentes:</p>
+<ul>
+<li>Um, dois ou três vídeo-cassetes ou aparelhos de DVD (um gravador);</li>
+<li>Misturador de vídeo;</li>
+<li>Computador com interface de controle e programa de edição de vídeo.</li>
+</ul>
+<p>Quando se vai criar um vídeo, é preciso ter em mente as opções do código de tempo SMPTE (quadros / segundo). A seguir, alguns exemplos:</p>
+<ul>
+<li>24 - cinema;</li>
+<li>25 - TV européia;</li>
+<li>30 - TV americana preto-e-branco;</li>
+<li>29,97 (“Drop-frame’’) - TV americana colorida.</li>
+</ul>
+<h3 id="armazenamento-digital-de-v%C3%ADdeo" tabindex="-1">Armazenamento Digital de Vídeo</h3>
+<h4 id="tecnologias-de-fita-digital" tabindex="-1">Tecnologias de Fita Digital</h4>
+<ul>
+<li>D-1, D-2, D-3, D-5 e D-9 - Padrões profissionais de nível e difusão</li>
+<li>DV e MiniDV, formatos de nível de consumidor, muito usados em câmeras gravadoras e seus derivados profissionais DVCAM, DVCPRO, DVCPRO HD</li>
+<li>Digital Betacam - Versão digital do Betacam</li>
+<li>D-VHS - Versão digital do S-VHS</li>
+</ul>
+<h4 id="tecnologias-de-disco-digital" tabindex="-1">Tecnologias de Disco Digital</h4>
+<p>Um registrador digital é um dispositivo que registra um vídeo em formato digital em um dispositivo de memória secundária como um disco. Este tipo de dispositivo permite gravar um video para uso posterior em CD ou DVD.</p>
+<h4 id="padr%C3%B5es" tabindex="-1">Padrões</h4>
+<p>Os principais padrões adotados para vídeo em formato digital são:</p>
+<ul>
+<li>ATSC - EUA, America Central e Coréias</li>
+<li>DVB-T - Europa, África, Ásia e Oceania</li>
+<li>DTMB - China</li>
+<li>ISDB - Adotado pelo Japão</li>
+<li>SBTVD - Brasil, Argentina, Chile, Peru e Venezuela</li>
+</ul>
+<h4 id="interfaces-1" tabindex="-1">Interfaces</h4>
+<p>As principais interfaces usadas para vídeo em formato digital são:</p>
+<ul>
+<li>HDMI - É uma interface compacta de áudio e vídeo para transmissão de sinal digital não comprimido.</li>
+<li>DVI - Padronizada pelo consórcio industrial DDWG e parcialmente compatível com HDMI</li>
+<li>SDI - Interface serial padronizada  SMPTE</li>
+<li>HD Ready - Interface utilizada em aparelhos de TV e que é compatível com vídeos com alta definição de imagem. Não necessariamente tem a mesma qualidade de uma interface HD.</li>
+<li>Full HD - Interface para alta definição de vídeos e que suporta o limite da tecnologia de alta definição de imagem.</li>
+</ul>
+<h3 id="aplica%C3%A7%C3%B5es-de-v%C3%ADdeo-digital" tabindex="-1">Aplicações de Vídeo Digital</h3>
+<p>Várias aplicações de vídeo digital foram desenvolvidas, muitas tendo como plataforma a Internet para compartilhamento ou distribuição de vídeos. Vejamos abaixo algumas dessas aplicações de vídeo digital:</p>
+<ul>
+<li>Vídeo Conferência - Usada para reuniões em que os participantes estão geograficamente dispersos. Só é possível devido a compressão digital de vídeo.</li>
+<li>TV Interativa - Sistema interativo em que o consumidor pode interagir com programas de televisão. Fundamental para TV Commerce.</li>
+<li>Vídeo sob Demanda - Distribuição de Vídeo a partir de uma central de fornecimento, através de linhas de alta capacidade.</li>
+<li>Internet TV - Distribuição de vídeo sob demanda porém através da Internet.</li>
+<li>Webcast - Distribuição de vídeo de mídia de fluxo contínuo através da Internet</li>
+<li>WebTV - Distribuição de vídeo através da internet.</li>
+<li>Televisão Móvel - Distribuição de conteúdo através de dispositivos móveis.</li>
+<li>Serviços de Compartilhamento de Vídeo - Permitem o compartilhamento de vídeo pela internet. Por exemplo, YouTube.</li>
+</ul>
+<h3 id="arquiteturas-de-v%C3%ADdeo-digital" tabindex="-1">Arquiteturas de Vídeo Digital</h3>
+<p>As grandes empresas de sistemas produzem seus padrões e arquiteturas. Como por exemplo, podemos citar:</p>
+<ul>
+<li><strong>Video for Windows:</strong> padrões da empresa Microsoft, como por exemplo, o formato AVI;</li>
+<li><strong>Quicktime:</strong> padrão da empresa Apple, que é independente de plataforma e têm seu uso predominantemente em CD-ROMs;</li>
+<li><strong>DirectShow:</strong> outro padrão Microsoft (Active Movie) e é baseado na tecnologia DirectX. Possui suporte para o MPEG-1, MPEG-2 e DVD;</li>
+</ul>
+
+    </div>
+</body>
+</html>
