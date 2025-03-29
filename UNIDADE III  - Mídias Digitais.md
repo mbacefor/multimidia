@@ -6,7 +6,7 @@
 
 A imagem é um elemento importante em aplicações multimídia. As imagens digitais são representadas por um conjunto de pontos. A quantidade de pontos diferentes que o olho humano pode distinguir em uma imagem é chamada resolução espacial da visão. A cada ponto chamamos **pixel**, do inglês **picture element**.
 
-![Resultado de imagem para ### Representação Digital das Imagens](imagens\Figura-2-Representacao-de-uma-imagem-digital-3-PRE-PROCESSAMENTO-O-pre-processamento-de.png)
+![Resultado de imagem para ### Representação Digital das Imagens](imagens/Figura-2-Representacao-de-uma-imagem-digital-3-PRE-PROCESSAMENTO-O-pre-processamento-de.png)
 
  O campo visual humano pode ser comparado a uma matriz de **3000 x 3000 pontos**. Este é o limite de pontos que o ser humano consegue distinguir.
 
@@ -28,7 +28,7 @@ A palavra cor é comumente relacionada a três sentidos diferentes. A química a
 
 Cor pode ser definida como a propriedade dos corpos em absorver e refletir luz, e tem como atributos principais o matiz, a luminosidade e a saturação. É o aspecto gerado pelas percepções do órgão visual em radiação eletromagnética visível de comprimento de onda entre ~380-400 a 740-750 nm, determinado basicamente pela fonte de luz e a superfície refletora (Figura 1).
 
-![image-20210218214228769](imagens\image-20210218214228769.png)
+![image-20210218214228769](imagens/image-20210218214228769.png)
 
 A  percepção humana sobre as cores as tornam de caráter altamente subjetivo e pessoal, fazendo com que a sensação da cor seja única após complexas operações de recebimento registrado pela retina e processamento de estímulos recebidos pelo cérebro (CAMARGOS; GONÇALEZ, 2001).
 
@@ -53,7 +53,7 @@ Espectrofotômetros e colorímetros são capazes de fornecer coordenadas colorim
 
 A quantidade bits necessária para representar um pixel depende da representação usada para as cores, além de outras propriedades da imagem. A visão humana enxerga a luz de comprimento de onda situado entre 400 e 700 nanômetros. As luzes dentro desta faixa são percebidas como cores espectrais ou cores do arco-íris e vão do violeta ao **anil, azul, verde, amarelo, alaranjado e vermelho**. Destas, as faixas de maior sensibilidade ao olho humano correspondem as cores **verde** ( principal ), **azul** ( bem menor ) e **vermelho** ( um pouco menor ).
 
-![Resultado de imagem para representação  de Cores imagem](imagens\8c227316a719d1dd4be8bc43152211b2c89b3d28.jpg)
+![Resultado de imagem para representação  de Cores imagem](imagens/8c227316a719d1dd4be8bc43152211b2c89b3d28.jpg)
 
 A maioria das cores que enxergamos não são cores puras mas composições resultantes de processos de emissão, reflexão, refração, difusão e absorção de luz. As cores são percebidas então como misturas de no máximo **três cores** básicas. Cada mistura pode ser expressa como uma **combinação linear**, isto é, cada cor é obtida pela soma ponderada das cores básicas.
 
@@ -65,15 +65,15 @@ Os modelos de cores mais usados se baseiam na decomposição de cores em mistura
 
 Vamos ver os principais sistemas de representação de cores utilizados:
 
-<img src="imagens\cores-759041.jpg" alt="Resultado de imagem para **Sistema Aditivo**" style="zoom: 50%;" />
+<img src="imagens/cores-759041.jpg" alt="Resultado de imagem para **Sistema Aditivo**" style="zoom: 50%;" />
 
 **Sistema Aditivo** - É um dos modelos mais utilizados e é também, conhecido como sistema RGB. Este sistema é baseado nas três cores verde, vermelho e azul que são as cores de maior sensibilidade. Estas cores formam as primárias aditivas usadas no **sistema RGB ( red-green-blue )**. Neste sistema parte-se da ideia de que qualquer cor pode ser representada como uma **soma ponderada** das cores azul, verde e vermelha. Trata-se de um padrão aditivo, que adiciona e combina cores para formar novas tonalidades, **sem depender da luz externa**. Os dispositivos que funcionam por emissão de luz, como os televisores e monitores de computadores, funcionam de acordo com o sistema RGB. Ao combinar as três cores, obtém-se mais luz, formando a cor branca. Por outro lado, quando se sobrepõem as cores em pares (de duas em duas), ganha-se as três cores primárias (amarelo, magenta e ciano). Cada cor do sistema RGB tem uma identificação numérica, muito utilizada em softwares de projetos visuais, como o Photoshop por exemplo. Essa representação é formada por três números, que variam cada um entre 0 e 255, representando a sua intensidade de vermelho, verde e azul, respectivamente.
 
-![CMYK](imagens\cmyk-colores_23-2147501034.jpg)
+![CMYK](imagens/cmyk-colores_23-2147501034.jpg)
 
 **Sistema Subtrativo -**  É um sistema que usa as **cores complementares** das cores básicas que são as cores secundárias, ou seja, **o ciano ( turquesa ), o magenta ( púrpura ) e o amarelo**. As cores secundárias são chamadas de **primárias subtrativas** e são usadas nos processos de impressão colorida e fotografia. O sistema subtrativo também é chamado de sistema CMY ( ciano, magenta e amarelo ). Este sistema é o mais natural para dispositivos de cópia como as impressoras coloridas. Diferente do RGB, que é uma “cor luz”, o CMYK é um padrão de cores formado por pigmentação. Como todas as cores se sobrepõem nesse sistema, a impressão é chamada de “cromia”. O que diferencia uma cor da outra, nesse caso, é o percentual de cada pigmentação utilizada. Por exemplo: C: 22% M: 34% Y: 31% K: 19%.
 
-![Resultado de imagem para Sistema HLS cores](imagens\HLS_.png)
+![Resultado de imagem para Sistema HLS cores](imagens/HLS_.png)
 
 **Sistema HLS -** É um sistema baseado em três qualidades distintas das cores que são a intensidade ou luminância, Matiz e a Saturação. Estas são qualidades relacionadas à percepção humana e formam a base do sistema HLS. Cada qualidade é medida e por isso este sistema é também conhecido por sistema quantitativo. A seguir vamos descrever de forma simples cada uma das qualidades relacionadas à percepção que formam a base do sistema HLS.
 
@@ -81,11 +81,11 @@ Vamos ver os principais sistemas de representação de cores utilizados:
 >
 > **Matiz (Tonalidade) -** Mede a qualidade que distingue o azul do verde, do vermelho, etc.
 >
-> ![img](imagens\360px-HueScale.svg.png)
+> ![img](imagens/360px-HueScale.svg.png)
 >
 > **Saturação -** Mede o grau de pureza de uma cor em relação a contaminação por outras cores. Saturação é a proporção de quantidade de cor em relação à cor cinza média. Quanto menos cinza na composição da cor, mais saturada ela é.
 
-![Resultado de imagem para O sistema CIE cores](imagens\lgh-cie-01.gif)
+![Resultado de imagem para O sistema CIE cores](imagens/lgh-cie-01.gif)
 
 **O sistema CIE -** É um sistema baseado em três cores imaginárias e invisíveis, chamadas X, Y e Z.
 
@@ -281,13 +281,13 @@ Os desenhos são figuras que são representadas por entidades provenientes da ge
 
 No computador, os desenhos são armazenados na forma de arquivos geométricos ou metarquivos gráficos. Eles permitem o armazenamento de figuras sintéticas em formatos mais compactos do que os que arquivos de imagens. Representam as figuras na forma de coleções de entidades geométricas. Do ponto de vista do computador, um arquivo de desenho contém registros de dados que descrevem conceitos da geometria. Esta descrição é feita com o uso de meta-dados, dado que descreve outro dado, no caso descrevem as formas geométricas que compõem o desenho. Estes arquivos também são chamados de arquivos vetoriais devido a importância que os vetores da geometria tem na descrição computacional dos desenhos.
 
-![Arquivo Matricial Vs. Arquivo Vetorial | SOS GIS BR](imagens\arq_vetorial.jpg)
+![Arquivo Matricial Vs. Arquivo Vetorial | SOS GIS BR](imagens/arq_vetorial.jpg)
 
 Os metaarquivos são importantes também porque são eles que contém a informação útil para muitas aplicações, como programas de editoração eletrônica, ilustração gráfica e animação. Em outras aplicações, a informação vetorial pode ser integrada a bases de dados especiais de determinada área, como no caso de projeto assistido por computador ( CAD ), sistemas arquitetônicos e de engenharia ou sistemas de informação geográfica.
 
 ### Vetorização
 
-![ttvheloa: Cartografia e Geoprocessamento Ambiental Av1 - Cartografia e  Geoprocessamento Ambiental](imagens\matriz-vetor.png)
+![ttvheloa: Cartografia e Geoprocessamento Ambiental Av1 - Cartografia e  Geoprocessamento Ambiental](imagens/matriz-vetor.png)
 
 Vetorização é o processo de passagem do domínio de imagens formadas por pixel para o domínio de imagens formadas por entidades geométricas. Esse processo é usado para digitalização de mapas: As cartas geográficas são capturadas por scanners e um algoritmo sofisticado extrai da imagem captada as entidades geométricas que irão compor o desenho tais como linhas e caracteres.
 
@@ -310,7 +310,7 @@ Alguns formatos de metarquivos comuns são:
 
 ### draw.io
 
-![image-20210314154438385](imagens\image-20210314154438385.png)
+![image-20210314154438385](imagens/image-20210314154438385.png)
 
 O **Draw.io** é um editor gráfico online no qual é possível desenvolver desenhos, gráficos e outros sem a necessidade de usar um software caro e pesado. Ele disponibiliza recursos para criação de qualquer tipo de desenho porém, possui uma parte dedicada à arquitetura da informação.
 
@@ -493,13 +493,13 @@ Dolby Stereo, Dolby Surround, DTS, THX, são alguns exemplos de formatos de som 
 
 Este tipo de codificação permite reunir mais de um canal de informação (tal como Frontal Left – FL, Central – C, Frontal Right – FR, Surround Right – SR, Surrond Left – SL, Low Frequency Effects – LFE etc) em canais estéreo, passíveis de serem reproduzidos em equipamentos estereofônicos.
 
-<img src="imagens\54043199373413643__pt-BR__Original.png" alt="Uso de um sistema de 7.1/5.1.2 canais" style="zoom:67%;" />
+<img src="imagens/54043199373413643__pt-BR__Original.png" alt="Uso de um sistema de 7.1/5.1.2 canais" style="zoom:67%;" />
 
 ### Representação Digital do Som
 
 Em sistemas analógicos o sinal sonoro é representado por um sinal magnético ou elétrico, com amplitude proporcional à amplitude do sinal acústico original. Nos dispositivos e sistemas eletrônicos, incluindo aí os computadores, o sinal sonoro é representado por uma sequência de números, que são compostas por bits 0 e 1.
 
-<img src="imagens\1200px-Digital.signal.svg.png" alt="Som digital – Wikipédia, a enciclopédia livre" style="zoom:80%;" />
+<img src="imagens/1200px-Digital.signal.svg.png" alt="Som digital – Wikipédia, a enciclopédia livre" style="zoom:80%;" />
 
 São exemplos de sistemas digitais de som:
 
@@ -515,7 +515,7 @@ Porém em um sinal digital a cópia é tão boa quanto a cópia original, não i
 
 #### Digitalização do Som
 
-![Técnicas & Truques no Estado de Minas](imagens\CF20050829c.jpg)
+![Técnicas & Truques no Estado de Minas](imagens/CF20050829c.jpg)
 
 O processo de conversão do som analógico para som digital consiste em converter o sinal elétrico em um sinal digital é chamado de digitalização do som. O sinal elétrico analógico, proveniente de microfones ou de equipamentos analógicos de reprodução, é convertido em uma sequência de números, num processo chamado conversão analógico-digital, ou conversão A/D.
 
@@ -535,7 +535,7 @@ Quanto maior for o *sample size* (ou resolução), melhor será a representaçã
 
 A figura a seguir traz a representação de ondas sonoras em um trecho musical em formato digital. À esquerda temos a representação gráfica simples de uma única amostra da onda, enquanto à direita temos a representação em 3D de sucessivas amostras da onda, ou seja, a execução contínua do som.
 
-![image-20210325214835410](imagens\image-20210325214835410.png)
+![image-20210325214835410](imagens/image-20210325214835410.png)
 
 #### Digitalização, Amostragem e Quantificação
 
@@ -546,7 +546,7 @@ Esta seção apresenta a forma de digitalização dos vários tipos de mídias d
 
 Para a conversão de sinais analógico em digital é necessário a realização de três passos: amostragem, quantificação e codificação.
 
-![image-20210327190407281](imagens\image-20210327190407281.png)
+![image-20210327190407281](imagens/image-20210327190407281.png)
 
 **Figura**: Conversão A/D [Lu, 96]: (a) sinal analógico; (b) pulsos de amostragem; (c) valores
 amostrados e intervalos de quantificação; (d) seqüência digital
