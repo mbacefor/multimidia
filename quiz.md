@@ -1,14 +1,17 @@
-
 # **Quiz: Mídias Digitais e Programação Web**
 
 ### **1. O que são mídias digitais?**
 
 a) Apenas imagens e vídeos utilizados na internet.
+
 ✅ **b) Qualquer conteúdo digital disponível na web, como textos, imagens, vídeos e áudios.**
+
 c) Somente conteúdos interativos, como jogos e animações.
+
 d) Arquivos físicos transformados em formato digital.
 
 📌 **Explicação:**
+
 Mídias digitais são qualquer tipo de conteúdo armazenado e distribuído digitalmente, incluindo textos, imagens, vídeos, áudios e animações. Elas são amplamente utilizadas para comunicação, entretenimento, educação e marketing na web.
 
 ---
@@ -16,11 +19,15 @@ Mídias digitais são qualquer tipo de conteúdo armazenado e distribuído digit
 ### **2. Qual das linguagens abaixo é essencial para a estruturação de páginas web que utilizam mídias digitais?**
 
 a) Java
+
 ✅ **b) HTML**
+
 c) Python
+
 d) SQL
 
 📌 **Explicação:**
+
 O **HTML (HyperText Markup Language)** é a linguagem de marcação usada para estruturar o conteúdo de páginas web. Ele define a forma como textos, imagens, vídeos e outros elementos de mídia digital são organizados e exibidos na web.
 
 ---
@@ -28,11 +35,15 @@ O **HTML (HyperText Markup Language)** é a linguagem de marcação usada para e
 ### **3. Qual formato de imagem é mais indicado para manter qualidade e transparência em um site?**
 
 a) JPG
+
 b) GIF
+
 ✅ **c) PNG**
+
 d) BMP
 
 📌 **Explicação:**
+
 O **PNG (Portable Network Graphics)** é um formato de imagem que suporta **transparência** e **compressão sem perda de qualidade**. Diferente do **JPG**, que perde qualidade ao ser comprimido, o PNG mantém alta fidelidade visual, sendo ideal para logos e imagens com fundo transparente.
 
 ---
@@ -40,11 +51,15 @@ O **PNG (Portable Network Graphics)** é um formato de imagem que suporta **tran
 ### **4. O que significa a sigla "SEO" no contexto de mídias digitais na web?**
 
 a) Social Engagement Optimization
+
 b) Secure Electronic Online
+
 ✅ **c) Search Engine Optimization**
+
 d) Software Enhancement Online
 
 📌 **Explicação:**
+
 **SEO (Search Engine Optimization)** é um conjunto de técnicas utilizadas para otimizar sites e conteúdos digitais, tornando-os mais visíveis nos mecanismos de busca como Google. Isso inclui o uso correto de palavras-chave, otimização de imagens e melhoria da experiência do usuário.
 
 ---
