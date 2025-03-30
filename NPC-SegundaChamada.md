@@ -9,29 +9,45 @@ Instruções: Responda às questões abaixo com base no texto "Mídias Digitais"
 ### Parte I: Questões de Múltipla Escolha (Marque a alternativa correta)
 
 1. Qual dos seguintes NÃO é um atributo principal da cor?
+
    a) Matiz
+
    b) Saturação
+
    c) Brilho
+
    d) Resolução
 2. O que é pixel?
    a) Um tipo de formato de imagem
+
    b) A menor unidade de uma imagem digital
+
    c) Um sistema de cores
+
    d) Um dispositivo de saída gráfica
 3. Qual sistema de cores é mais comumente usado em monitores de computador?
    a) CMYK
+
    b) RGB
+
    c) HSV
+
    d) YUV
 4. Qual formato de imagem é conhecido por sua compressão sem perdas?
    a) JPEG
+
    b) GIF
+
    c) PNG
+
    d) TIFF
 5. Qual dos seguintes dispositivos é um dispositivo de entrada gráfica?
    a) Monitor
+
    b) Impressora
+
    c) Scanner
+
    d) Projetor
 
 ### Parte II: Questões Dissertativas
